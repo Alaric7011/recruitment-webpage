@@ -225,6 +225,14 @@
       text-align: center;
       padding: 120px 24px 80px;
       overflow: hidden;
+
+      /* Background image */
+      background-image:
+        linear-gradient(rgba(13,13,26,0.75), rgba(13,13,26,0.82)),
+        url('./assets/bg-image.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     /* Animated canvas background */
@@ -339,34 +347,6 @@
     }
     .stat-label {
       font-size: 0.75rem; color: var(--text-3); margin-top: 5px; font-weight: 500;
-    }
-
-    /* Scroll indicator */
-    .scroll-indicator {
-      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
-      animation: fadeUp 0.8s var(--ease) 1.2s both;
-    }
-    .scroll-indicator span {
-      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--text-3);
-    }
-    .scroll-dot {
-      width: 26px; height: 40px; border: 2px solid var(--border-2);
-      border-radius: 14px; display: flex; justify-content: center; padding-top: 7px;
-    }
-    .scroll-dot::before {
-      content: ''; width: 4px; height: 8px; background: var(--accent);
-      border-radius: 2px; animation: scrollBounce 1.8s infinite;
-    }
-    @keyframes scrollBounce {
-      0%,100% { transform: translateY(0); opacity: 1; }
-      50% { transform: translateY(10px); opacity: 0.3; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
     }
 
     /* ============================================================
@@ -1494,11 +1474,12 @@
       display: flex; align-items: center; justify-content: center; gap: 14px;
     }
     .founder-avatar {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--accent-dim); border: 2px solid rgba(168,85,247,0.3);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-head); font-size: 1.1rem; font-weight: 800;
-      color: var(--accent);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(168,85,247,0.3);
+      display: block;
     }
     .founder-name {
       font-family: var(--font-head); font-size: 0.95rem; font-weight: 700;
@@ -1670,7 +1651,7 @@
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a class="nav-logo" href="#hero" aria-label="The Startup School home">
-        The Startup <span>School</span>
+        The <span> Startup</span> School
       </a>
       <div class="nav-links" id="nav-links">
         <a href="#why">Why Join</a>
@@ -1724,7 +1705,7 @@
       <!-- Animated stats -->
       <div class="hero-stats" aria-label="Company statistics">
         <div class="stat-card">
-          <div class="stat-num" data-target="5000" data-suffix="+">0</div>
+          <div class="stat-num" data-target="500" data-suffix="+">0</div>
           <div class="stat-label">Founders Impacted</div>
         </div>
         <div class="stat-card">
@@ -1736,16 +1717,12 @@
           <div class="stat-label">YoY Growth</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num" data-target="7">0</div>
+          <div class="stat-num" data-target="3">0</div>
           <div class="stat-label">Open Roles</div>
         </div>
       </div>
     </div>
 
-    <div class="scroll-indicator" aria-hidden="true">
-      <div class="scroll-dot"></div>
-      <span>Scroll</span>
-    </div>
   </section>
 
   <!-- ============================================================
@@ -1986,8 +1963,8 @@
           <div class="step-node"><i class="fa-solid fa-pen-nib"></i></div>
           <div class="process-step-text">
             <div class="step-num">Step 02</div>
-            <h3>Short Assignment</h3>
-            <p>A focused 1–2 hour task relevant to the role. This is where you show us how you think.</p>
+            <h3>HR Interview</h3>
+            <p>A short conversation with our HR team to understand your journey, communication style, and role fit. Relaxed, thoughtful, and useful for both sides.</p>
           </div>
         </div>
         <div class="process-step" style="transition-delay:0.4s">
@@ -2026,7 +2003,7 @@
         </p>
         <div class="founder-divider"></div>
         <div class="founder-info">
-          <div class="founder-avatar">G</div>
+          <img class="founder-avatar" src="assets/der.jpg" alt="Founder">
           <div>
             <div class="founder-name">Gaurav Bansal</div>
             <div class="founder-role">Founder, The Startup School · Mentor at IIT Madras E-Cell · Judge at IIM Rohtak</div>
