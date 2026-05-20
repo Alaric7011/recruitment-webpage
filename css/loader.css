@@ -1,0 +1,28 @@
+/* ============================================================
+   LOADING SCREEN
+============================================================ */
+#loading-screen {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 24px;
+  transition: opacity 0.5s var(--ease), visibility 0.5s;
+}
+#loading-screen.hidden { opacity: 0; visibility: hidden; }
+
+.loader-logo {
+  font-family: var(--font-head); font-size: 1.2rem; font-weight: 800;
+  letter-spacing: 0.05em; color: var(--text);
+}
+.loader-logo span { color: var(--accent); }
+
+.loader-bar-wrap {
+  width: 160px; height: 2px; background: var(--border-2);
+  border-radius: 10px; overflow: hidden;
+}
+.loader-bar {
+  height: 100%; width: 0%; background: var(--accent);
+  border-radius: 10px;
+  animation: loadBar 1.4s var(--ease) forwards;
+}

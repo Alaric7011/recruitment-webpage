@@ -1,0 +1,59 @@
+/* ============================================================
+   RESPONSIVE
+   Consolidated media queries — single source for breakpoints
+============================================================ */
+
+/* Tablet & below — 900px */
+@media (max-width: 900px) {
+  .why-grid              { grid-template-columns: 1fr 1fr; }
+  .thrives-grid          { grid-template-columns: 1fr; }
+  .life-grid             { grid-template-columns: 1fr 1fr; }
+  .life-card.featured    { grid-column: span 1; }
+
+  .process-timeline      { flex-direction: column; align-items: flex-start; gap: 0; }
+  .process-timeline::before,
+  .process-timeline::after { display: none; }
+  .process-step {
+    flex-direction: row; text-align: left; gap: 20px;
+    width: 100%; padding: 0 0 28px 0;
+  }
+  .step-node             { margin-bottom: 0; flex-shrink: 0; }
+  .process-step-text     { flex: 1; }
+}
+
+/* Mobile — 700px */
+@media (max-width: 700px) {
+  .thrives-grid          { grid-template-columns: 1fr; }
+  .why-grid              { grid-template-columns: 1fr; }
+  .life-grid             { grid-template-columns: 1fr; }
+  .nav-links, .nav-cta   { display: none; }
+  .nav-hamburger         { display: flex; }
+  .founder-card          { padding: 36px 28px; }
+  #modal-box             { padding: 28px 22px; }
+  .modal-perks-grid      { grid-template-columns: 1fr; }
+  .hero-stats            { gap: 10px; }
+  .stat-card             { min-width: 100px; padding: 12px 14px; }
+}
+
+/* Small mobile — 600px (role management modal) */
+@media (max-width: 600px) {
+  .rm-form-grid          { grid-template-columns: 1fr; }
+  .rm-form-group.full    { grid-column: span 1; }
+  #rm-modal-overlay      { padding: 0; align-items: flex-end; }
+  #rm-modal-box          {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    max-height: 92vh; overflow-y: auto;
+  }
+}
+
+/* Very small mobile — 500px */
+@media (max-width: 500px) {
+  #roles-grid            { grid-template-columns: 1fr; }
+  .roles-controls        { flex-direction: column; }
+  .filter-pills          { width: 100%; }
+}
+
+/* Ultra-small hero scaling */
+@media (max-width: 480px) {
+  .hero-title            { font-size: 11.5vw; }
+}

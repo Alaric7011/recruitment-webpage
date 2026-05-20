@@ -1,0 +1,49 @@
+/* ============================================================
+   DESIGN TOKENS — TSS Brand Theme
+   Central source for colors, typography, spacing, motion.
+============================================================ */
+:root {
+  /* Backgrounds */
+  --bg:          #0d0d1a;
+  --bg-2:        #11112b;
+  --bg-3:        #14143a;
+
+  /* Surfaces */
+  --surface:     rgba(255,255,255,0.04);
+  --surface-2:   rgba(255,255,255,0.07);
+  --border:      rgba(255,255,255,0.08);
+  --border-2:    rgba(255,255,255,0.14);
+
+  /* Accent + semantic */
+  --accent:      #a855f7;
+  --accent-dim:  rgba(168,85,247,0.14);
+  --accent-glow: rgba(168,85,247,0.35);
+  --red:         #ef4444;
+  --red-dim:     rgba(239,68,68,0.12);
+  --green:       #4ade80;
+  --yellow:      #fbbf24;
+
+  /* Text */
+  --text:        #f0f0ff;
+  --text-2:      #9090b8;
+  --text-3:      #55557a;
+
+  /* Type */
+  --font-head:   'Syne', sans-serif;
+  --font-body:   'DM Sans', sans-serif;
+
+  /* Radii */
+  --radius-sm:   8px;
+  --radius:      14px;
+  --radius-lg:   22px;
+  --radius-xl:   32px;
+
+  /* Elevation */
+  --shadow:      0 4px 30px rgba(0,0,0,0.5);
+  --shadow-lg:   0 12px 60px rgba(0,0,0,0.7);
+  --glow:        0 0 40px rgba(168,85,247,0.22);
+
+  /* Motion */
+  --ease:        cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-fast:   cubic-bezier(0.4, 0, 0.2, 1);
+}
